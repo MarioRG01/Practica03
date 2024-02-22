@@ -42,10 +42,10 @@
                 android:text="genero:" />
 
             <TextView
-                android:id="@+id/año"
+                android:id="@+id/anio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="año:" />
+                android:text="anio:" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

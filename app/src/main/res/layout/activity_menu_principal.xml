@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/lista"
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
@@ -25,8 +25,9 @@
             app:title="Lista de Peliculas" />
 
         <ListView
+            android:id="@+id/lista"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item"/>
+            tools:listitem="@layout/item" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
