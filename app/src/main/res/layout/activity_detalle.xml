@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".Detalle">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -24,44 +25,60 @@
             android:contentDescription="imagen de perfil"
             app:srcCompat="@drawable/usuario" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre:" />
+
         <EditText
-            android:id="@+id/Email"
+            android:id="@+id/nombre_peli"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:minHeight="48dp" />
+            android:inputType="text"
+            android:text="Nombre Pelicula" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Genero:" />
 
         <EditText
-            android:id="@+id/Password"
+            android:id="@+id/genero_peli"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:minHeight="48dp" />
+            android:inputType="text"
+            android:text="Genero Pelicula" />
 
-        <Button
-            android:id="@+id/Login"
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login" />
+            android:text="Año:" />
 
-        <Button
-            android:id="@+id/CrearCuenta"
+        <EditText
+            android:id="@+id/año_peli"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/transparent"
-            android:text="Crear Cuenta"
-            android:textColor="#673AB7" />
+            android:ems="10"
+            android:inputType="text"
+            android:text="Año Pelicula" />
 
         <Button
-            android:id="@+id/CrearP"
+            android:id="@+id/editar_peli"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/transparent"
-            android:text="Crear Password"
-            android:textColor="#673AB7" />
+            android:text="Editar" />
+
+        <Button
+            android:id="@+id/eliminar_peli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F44336"
+            android:text="Eliminar" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

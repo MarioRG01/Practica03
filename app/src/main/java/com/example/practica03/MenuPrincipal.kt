@@ -1,6 +1,7 @@
 package com.example.practica03
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -33,6 +34,20 @@ class MenuPrincipal : AppCompatActivity() {
         auth = Firebase.auth
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+
+        var lista = findViewById<ListView>(R.id.lista)
+        lista.setOnItemClickListener{
+            parent , view, position, id ->
+
+
+            startActivity(Intent(this, Detalle::class.java)
+                .putExtra("id",pelicuas[position].id)
+                .putExtra("nombre",pelicuas[position].nombre)
+                .putExtra("genero",pelicuas[position].genero)
+                .putExtra("anio",pelicuas[position].año))
+
+        }
 
 
         val menuHost: MenuHost = this
@@ -81,6 +96,8 @@ class MenuPrincipal : AppCompatActivity() {
             }
 
         })
+
+
 
         fun llenalista()
         {
