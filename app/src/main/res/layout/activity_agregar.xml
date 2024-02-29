@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Detalle">
+    tools:context=".Agregar">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -18,32 +18,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/ImagenDe"
-            android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:contentDescription="imagen de perfil"
-            app:srcCompat="@drawable/usuario" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nombre:" />
-
         <EditText
             android:id="@+id/anombre_peli"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:text="Nombre Pelicula" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Genero:" />
+            android:text="Nombre:" />
 
         <EditText
             android:id="@+id/agenero_peli"
@@ -51,13 +32,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:text="Genero Pelicula" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Año:" />
+            android:text="Genero:" />
 
         <EditText
             android:id="@+id/aaño_peli"
@@ -65,20 +40,13 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:text="Año Pelicula" />
+            android:text="Año:" />
 
         <Button
             android:id="@+id/agregar_peli"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Editar" />
-
-        <Button
-            android:id="@+id/eliminar_peli"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#F44336"
-            android:text="Eliminar" />
+            android:text="Agregar Pelicula" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

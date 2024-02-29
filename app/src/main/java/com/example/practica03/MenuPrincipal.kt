@@ -1,5 +1,6 @@
 package com.example.practica03
 
+import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +14,7 @@ import android.widget.ListView
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -97,16 +99,22 @@ class MenuPrincipal : AppCompatActivity() {
 
         })
 
+        val btnAgregar = findViewById<FloatingActionButton>(R.id.Agregar)
 
-
-        fun llenalista()
-        {
-            val adaptador = PeliAdapter(this,pelicuas)
-            var lista = findViewById<ListView>(R.id.lista)
-            lista.adapter = adaptador
+        btnAgregar.setOnClickListener {
+            startActivity(Intent(this, Agregar::class.java))
         }
-    }
 
+
+
+
+    }
+    public fun llenalista()
+    {
+        val adaptador = PeliAdapter(this,pelicuas)
+        var lista = findViewById<ListView>(R.id.lista)
+        lista.adapter = adaptador
+    }
     override fun onKeyDown(keyCode: Int, event:KeyEvent?): Boolean{
 
         if (keyCode== KeyEvent.KEYCODE_BACK)
